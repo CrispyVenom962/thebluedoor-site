@@ -218,6 +218,22 @@
     .pkg-feature:nth-child(2){border-top:1px solid var(--line);padding-top:12px}
     .pkg-card{padding:24px}
   }
+
+  .pkg-compare{width:100%;border-collapse:collapse;font-size:14.5px}
+  .pkg-compare th,.pkg-compare td{padding:14px 20px;text-align:center;border-bottom:1px solid var(--line)}
+  .pkg-compare th:first-child,.pkg-compare td:first-child{text-align:left;color:var(--teal-deep);font-weight:600}
+  .pkg-compare thead th{background:var(--stone-2);color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:15px}
+  .pkg-compare thead th:first-child{background:var(--stone-2)}
+  .pkg-compare td.yes{color:var(--gold);font-size:17px;font-weight:700}
+  .pkg-compare tbody tr:last-child td{border-bottom:none}
+  .addon-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;font-size:14.5px;color:#454545}
+  .addon-grid div{padding:9px 0 9px 20px;border-bottom:1px solid var(--line);position:relative}
+  .addon-grid div::before{content:'+';position:absolute;left:0;color:var(--terra);font-weight:700}
+  @media(max-width:640px){
+    .addon-grid{grid-template-columns:1fr}
+    .pkg-compare{font-size:12px}
+    .pkg-compare th,.pkg-compare td{padding:9px 6px}
+  }
 </style>
 </head>
 <body>
@@ -256,53 +272,65 @@
 
     <div class="grid3" style="grid-template-columns:1fr">
       <div class="card pkg-card">
-        <div class="pkg-eyebrow">Package 1 of 3 — Discovery</div>
-        <h3 class="pkg-title">Start Your Journey with Confidence</h3>
-        <p class="pkg-tagline">Explore whether Portugal is right for you — before you commit to anything.</p>
-        <div class="pkg-note">Ideal before you've committed to a move</div>
-        <p class="pkg-desc">Moving to another country is a major life decision. Before investing time and money, we help you understand what life in Portugal is really like and what to expect throughout the relocation process — with independent, practical advice tailored to your personal circumstances.</p>
+        <div class="pkg-eyebrow">Tier 1 of 3 — Essential</div>
+        <h3 class="pkg-title">Essential Package</h3>
+        <p class="pkg-tagline">Your first step towards life in Portugal.</p>
+        <div class="pkg-note">For those still planning their move, or recently arrived</div>
+        <p class="pkg-desc">Designed for individuals and couples who want expert guidance before and during the early stages of their move. We'll help you navigate the key administrative requirements, provide practical advice and ensure you begin your relocation with confidence — and help you avoid many of the common mistakes made by new residents.</p>
         <div class="pkg-body">
           <div class="pkg-features">
             <div class="pkg-feature">
-              <h4>Personal Consultation</h4>
-              <p>A 60–90 minute one-to-one session covering your goals, timeline, budget and any concerns.</p>
+              <h4>Dedicated Blue Door Consultant</h4>
+              <p>Your single point of contact throughout the package.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Lifestyle Assessment</h4>
-              <p>Matching Portugal's regions and lifestyles — coastal, city, countryside, retirement communities — to your priorities.</p>
+              <h4>Initial Discovery Consultation</h4>
+              <p>A one-to-one session to understand your situation and goals.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Cost of Living Guidance</h4>
-              <p>Realistic monthly budget figures for rent, healthcare, transport, insurance and everyday life.</p>
+              <h4>Personal Relocation Roadmap</h4>
+              <p>Your recommended order of tasks and timeline.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Best Places to Live</h4>
-              <p>An honest look at Porto, Lisbon, Cascais, the Algarve, the Silver Coast and more, matched to your needs.</p>
+              <h4>Welcome Pack</h4>
+              <p>Our branded onboarding pack, checklists and key guides to get you started.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Visa &amp; Residency Overview</h4>
-              <p>The main pathways, typical documentation, timelines and family considerations.</p>
+              <h4>NIF Guidance</h4>
+              <p>What it is, why you need it, and how to get yours.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Healthcare Overview</h4>
-              <p>Public versus private care, insurance options, typical costs and English-speaking providers.</p>
+              <h4>Portuguese Bank Account Assistance</h4>
+              <p>Practical guidance opening and running your account.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Banking Guidance</h4>
-              <p>What's involved in opening and running a Portuguese bank account as a newcomer.</p>
+              <h4>SIM Card &amp; Mobile Phone Guidance</h4>
+              <p>Getting connected quickly after you arrive.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Roadmap &amp; Written Report</h4>
-              <p>A personal action plan and written summary of our discussion, yours to keep as a reference.</p>
+              <h4>Utility Set-Up Guidance</h4>
+              <p>Electricity, water and gas — sorted without the guesswork.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Local Orientation Information</h4>
+              <p>Getting your bearings in your new town or city.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Essential Document Checklists</h4>
+              <p>Know exactly what you need, and when.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Email Support</h4>
+              <p>Ongoing email support for the duration of the package.</p>
             </div>
           </div>
           <div class="pkg-side">
             <h5>Ideal For</h5>
             <ul>
-              <li>Retirees exploring Portugal</li>
-              <li>Families considering relocation</li>
-              <li>Remote workers &amp; investors</li>
-              <li>Anyone who wants expert guidance before committing</li>
+              <li>Individuals &amp; couples</li>
+              <li>Retirees</li>
+              <li>Digital nomads</li>
+              <li>Clients arranging much of their relocation independently</li>
             </ul>
             <a href="index.html#cta" class="btn btn-primary">Book a free consultation</a>
           </div>
@@ -312,49 +340,77 @@
 
     <div class="grid3" style="grid-template-columns:1fr">
       <div class="card pkg-card">
-        <div class="pkg-eyebrow">Package 2 of 3 — Planning</div>
-        <h3 class="pkg-title">Relocation Planning Package</h3>
-        <p class="pkg-tagline">A fully personalized plan for your move, built around you.</p>
-        <div class="pkg-note">For clients who've decided to make the move</div>
-        <p class="pkg-desc">Once Portugal is the plan, we get to know you properly. A detailed discovery process across every part of your move feeds directly into a personalized planning pack and a dedicated consultant who keeps your relocation on track from signing to arrival.</p>
+        <div class="pkg-eyebrow">Tier 2 of 3 — Premium</div>
+        <h3 class="pkg-title">Premium Package</h3>
+        <p class="pkg-tagline">A complete relocation service with hands-on support.</p>
+        <div class="pkg-note">Everything in the Essential Package, plus</div>
+        <p class="pkg-desc">Designed for clients who want Blue Door to guide them through every important stage of establishing their new life in Portugal — practical, hands-on assistance with property, healthcare, insurance, driving and settling into your new community. This package significantly reduces the stress of relocating and gives you the reassurance of an experienced local team throughout the process.</p>
         <div class="pkg-body">
           <div class="pkg-features">
             <div class="pkg-feature">
-              <h4>In-Depth Discovery Questionnaire</h4>
-              <p>Your circumstances, motivations, timeline and lifestyle preferences, captured in detail.</p>
+              <h4>Property Purchase or Rental Guidance</h4>
+              <p>Whichever route you're taking, we help you navigate it.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Budget &amp; Property Planning</h4>
-              <p>Your budget and property criteria — renting or buying, type, location, must-haves — mapped from the outset.</p>
+              <h4>Utility Activation Assistance</h4>
+              <p>Hands-on help getting connected, not just guidance.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Healthcare &amp; Banking Requirements</h4>
-              <p>Your medical needs and financial requirements identified early, before they become urgent.</p>
+              <h4>Healthcare Registration Guidance</h4>
+              <p>Registering with the SNS and finding the right care.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Full Logistics Checklist</h4>
-              <p>Documents, family, pets, vehicles, shipping, schooling, tax residency, Power of Attorney and everything in between.</p>
+              <h4>Private Health Insurance Guidance</h4>
+              <p>Comparing options suited to your circumstances.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Personalized Planning Pack</h4>
-              <p>Your relocation checklist, visa/residency and NIF checklists, bank account checklist, and first week &amp; first month guides.</p>
+              <h4>Driving Licence Exchange Guidance</h4>
+              <p>Navigating the exchange process at IMT.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Property &amp; Settling Guides</h4>
-              <p>Renting versus buying, healthcare registration, insurance, utilities and driving — tailored to your situation.</p>
+              <h4>Vehicle Purchase Guidance</h4>
+              <p>Buying or leasing a car as a new resident.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Dedicated Consultant</h4>
-              <p>One point of contact who builds and maintains your personal roadmap throughout.</p>
+              <h4>Via Verde Assistance</h4>
+              <p>Setting up Portugal's automatic toll system.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>School &amp; Childcare Guidance</h4>
+              <p>Finding the right fit for your family.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Local Service Provider Recommendations</h4>
+              <p>Vetted local contacts for whatever you need.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Government Appointment Guidance</h4>
+              <p>Navigating AIMA and other official appointments.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Translation Assistance</h4>
+              <p>Non-certified translation help for everyday documents.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Ongoing Relocation Support</h4>
+              <p>Continued guidance as new questions come up.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Priority Email Support</h4>
+              <p>Faster response times when you need us.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Scheduled Progress Reviews</h4>
+              <p>Regular check-ins to keep your move on track.</p>
             </div>
           </div>
           <div class="pkg-side">
             <h5>Ideal For</h5>
             <ul>
-              <li>Clients who've committed to the move</li>
-              <li>Families needing every logistical detail accounted for</li>
-              <li>Those handling the process themselves with expert guidance</li>
-              <li>Anyone who wants one organized reference for their whole move</li>
+              <li>Families</li>
+              <li>Property buyers</li>
+              <li>Long-term residents</li>
+              <li>Clients wanting comprehensive relocation assistance</li>
             </ul>
             <a href="index.html#cta" class="btn btn-primary">Book a free consultation</a>
           </div>
@@ -364,52 +420,135 @@
 
     <div class="grid3" style="grid-template-columns:1fr">
       <div class="card pkg-card">
-        <div class="pkg-eyebrow">Package 3 of 3 — Concierge</div>
-        <h3 class="pkg-title">Portugal Premium Concierge</h3>
-        <p class="pkg-tagline">"A complete white-glove relocation service."</p>
-        <div class="pkg-note">Includes everything in Packages 1 &amp; 2</div>
-        <p class="pkg-desc">For clients who'd rather delegate the logistics entirely, Premium Concierge pairs you with a dedicated personal concierge who arranges and coordinates every appointment, introduction and decision — so you arrive to a home and a life that's already set up.</p>
+        <div class="pkg-eyebrow">Tier 3 of 3 — Signature</div>
+        <h3 class="pkg-title">Signature Package</h3>
+        <p class="pkg-tagline">Our complete concierge relocation experience.</p>
+        <div class="pkg-note">Everything in the Premium Package, plus</div>
+        <p class="pkg-desc">Our most comprehensive service, designed for clients who want a truly personalised relocation experience with ongoing support before, during and after their move. You'll benefit from a dedicated relocation consultant acting as your personal point of contact, coordinating every stage of your relocation and introducing trusted professionals whenever specialist advice is required — from your first planning conversation until you're comfortably settled into your new home.</p>
         <div class="pkg-body">
           <div class="pkg-features">
             <div class="pkg-feature">
-              <h4>Visa, Legal &amp; Tax</h4>
-              <p>Your visa process coordinated with an agreed lawyer, plus accountant, tax planning and company formation introductions where needed.</p>
+              <h4>Dedicated Personal Relocation Consultant</h4>
+              <p>One expert who owns your relocation, start to finish.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Home &amp; Property</h4>
-              <p>Accommodation and property search, budgeted furniture purchasing, and utility setup handled for you.</p>
+              <h4>Concierge-Level Support</h4>
+              <p>We arrange and coordinate, so you don't have to.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Banking &amp; Insurance</h4>
-              <p>Bank appointments arranged, health insurance options presented and agreed on your behalf.</p>
+              <h4>Priority Scheduling &amp; Response</h4>
+              <p>Unlimited scheduled consultations and our highest priority response times.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Appointments &amp; Admin</h4>
-              <p>AIMA appointments coordinated with your lawyer, plus car purchase or lease options and school visits.</p>
+              <h4>Property Viewing Coordination</h4>
+              <p>We organise and accompany viewings on your behalf.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Local Life</h4>
-              <p>Household staff recommendations and local orientation, so daily life feels familiar faster.</p>
+              <h4>Move-In Planning</h4>
+              <p>A clear plan for the day you arrive and the days after.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Ongoing Support</h4>
-              <p>12 months of continued concierge support after you arrive.</p>
+              <h4>Furniture &amp; Home Set-Up Assistance</h4>
+              <p>Hands-on help turning a property into a home.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Trusted Supplier Introductions</h4>
+              <p>Our vetted network, introduced personally.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Lifestyle &amp; Local Integration Support</h4>
+              <p>Settling into the rhythm of Portuguese life, not just the paperwork.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Business Introductions</h4>
+              <p>Where appropriate, for entrepreneurs and investors.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Annual Administrative Reminders</h4>
+              <p>So renewals and deadlines never catch you off guard.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Ongoing Check-Ins</h4>
+              <p>We stay in touch well after you've relocated.</p>
             </div>
           </div>
           <div class="pkg-side">
             <h5>Ideal For</h5>
             <ul>
-              <li>Clients who want the process handled for them</li>
-              <li>Retirees &amp; families relocating who'd rather not manage logistics</li>
-              <li>Business owners &amp; executives with limited time</li>
-              <li>Anyone who wants one dedicated concierge, start to settled</li>
+              <li>Executives &amp; high-net-worth individuals</li>
+              <li>Families relocating permanently</li>
+              <li>Overseas property buyers</li>
+              <li>Clients wanting a seamless, fully managed relocation</li>
             </ul>
-            <a href="index.html#cta" class="btn btn-primary">Enquire about Premium Concierge</a>
+            <a href="index.html#cta" class="btn btn-primary">Enquire about Signature</a>
           </div>
         </div>
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="pad" style="background:var(--stone-2)">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Compare At A Glance</div>
+      <h2>Which package is right for you?</h2>
+      <p>A quick side-by-side of what's included at each tier.</p>
+    </div>
+    <div class="card" style="overflow-x:auto;padding:0">
+      <table class="pkg-compare">
+        <thead>
+          <tr>
+            <th>Blue Door</th>
+            <th>Essential</th>
+            <th>Premium</th>
+            <th>Signature</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Welcome Consultation</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Banking Guidance</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Healthcare Assistance</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Property Guidance</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Priority Response</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Home Set-Up Assistance</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Dedicated Consultant</td><td></td><td></td><td class="yes">✓</td></tr>
+          <tr><td>Concierge Support</td><td></td><td></td><td class="yes">✓</td></tr>
+          <tr><td>Ongoing Lifestyle Support</td><td></td><td></td><td class="yes">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Tailor Your Package</div>
+      <h2>Optional add-on services</h2>
+      <p>Any package can be tailored with additional services, including:</p>
+    </div>
+    <div class="card" style="max-width:920px;margin:0 auto">
+      <div class="addon-grid">
+        <div>Airport meet &amp; greet</div>
+        <div>Temporary accommodation assistance</div>
+        <div>Property viewing tours</div>
+        <div>Furniture sourcing</div>
+        <div>Home set-up assistance</div>
+        <div>Driver's licence support</div>
+        <div>Vehicle purchase assistance</div>
+        <div>School visit coordination</div>
+        <div>Translation &amp; interpreting services</div>
+        <div>Company formation guidance</div>
+        <div>Retirement planning introductions</div>
+        <div>Tax &amp; accounting introductions</div>
+        <div>Legal introductions</div>
+        <div>Annual residency reminders</div>
+        <div>Document renewal reminders</div>
+        <div>Personal concierge services</div>
+      </div>
+    </div>
   </div>
 </section>
 
