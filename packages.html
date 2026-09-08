@@ -229,14 +229,9 @@
   .pkg-compare thead th:first-child{background:var(--stone-2)}
   .pkg-compare td.yes{color:var(--gold);font-size:17px;font-weight:700}
   .pkg-compare tbody tr:last-child td{border-bottom:none}
-  .addon-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;font-size:14.5px;color:#454545;align-items:start}
-  .addon-grid details{border-bottom:1px solid var(--line)}
-  .addon-grid summary{list-style:none;cursor:pointer;padding:11px 0 11px 20px;position:relative;font-weight:500;color:#333}
-  .addon-grid summary::-webkit-details-marker{display:none}
-  .addon-grid summary::before{content:'+';position:absolute;left:0;top:11px;color:var(--terra);font-weight:700;transition:transform .2s}
-  .addon-grid details[open] summary::before{transform:rotate(45deg)}
-  .addon-grid details p{margin:0;padding:0 0 12px 20px;font-size:13.5px;line-height:1.55;color:#666}
-  .addon-note{text-align:center;font-size:13.5px;color:#777;margin:18px 0 0}
+  .addon-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;font-size:14.5px;color:#454545}
+  .addon-grid div{padding:9px 0 9px 20px;border-bottom:1px solid var(--line);position:relative}
+  .addon-grid div::before{content:'+';position:absolute;left:0;color:var(--terra);font-weight:700}
   @media(max-width:640px){
     .addon-grid{grid-template-columns:1fr}
     .pkg-compare{font-size:12px}
@@ -280,11 +275,11 @@
 
     <div class="grid3" style="grid-template-columns:1fr">
       <div class="card pkg-card">
-        <div class="pkg-eyebrow">Tier 1 of 3 - Start with Confidence</div>
+        <div class="pkg-eyebrow">Tier 1 of 3 — Start with Confidence</div>
         <h3 class="pkg-title">Start with Confidence</h3>
         <p class="pkg-tagline">Opening the door to your new life in Portugal.</p>
-        <div class="pkg-note">For those still deciding whether Portugal is right for them</div>
-        <p class="pkg-desc">Thinking about Portugal but not sure where to begin? We take the time to understand you, your aspirations and what matters most, then help you work out whether Portugal is the right fit - and what to weigh up before committing to anything. Clear answers to your real questions, so you can decide your next move with confidence.</p>
+        <div class="pkg-note">For those still exploring whether Portugal is right for them</div>
+        <p class="pkg-desc">Thinking about a new life in Portugal but not sure where to begin? We take the time to understand you, your aspirations and what matters most, then help you explore whether Portugal is the right fit — and what to consider before making any commitments. In-depth information, answered clearly, so you can decide your next move with confidence.</p>
         <div class="pkg-body">
           <div class="pkg-features">
             <div class="pkg-feature">
@@ -327,11 +322,11 @@
 
     <div class="grid3" style="grid-template-columns:1fr">
       <div class="card pkg-card">
-        <div class="pkg-eyebrow">Tier 2 of 3 - Move with Confidence</div>
+        <div class="pkg-eyebrow">Tier 2 of 3 — Move with Confidence</div>
         <h3 class="pkg-title">Move with Confidence</h3>
         <p class="pkg-tagline">You've decided. Now we'll help you make it happen.</p>
-        <div class="pkg-note">For those ready to move and wanting knowledgeable guidance from decision to arrival</div>
-        <p class="pkg-desc">Portugal is the right fit - now comes the reality of making it happen. We help you navigate the important decisions, understand what needs to be done and when, and build a clear path from where you are now to the day you arrive.</p>
+        <div class="pkg-note">For those ready to move, and wanting knowledgeable guidance throughout</div>
+        <p class="pkg-desc">You've decided Portugal is right for you. Now comes the reality of making it happen. We help you navigate the important decisions, understand what needs to be done, and build a clear path from where you are now to your arrival in Portugal.</p>
         <div class="pkg-body">
           <div class="pkg-features">
             <div class="pkg-feature">
@@ -390,11 +385,11 @@
 
     <div class="grid3" style="grid-template-columns:1fr">
       <div class="card pkg-card">
-        <div class="pkg-eyebrow">Tier 3 of 3 - Move &amp; Settle with Confidence</div>
-        <h3 class="pkg-title">Move &amp; Settle with Confidence</h3>
-        <p class="pkg-tagline">From first plan to fully settled - we're with you all the way.</p>
-        <div class="pkg-note">For those who want a dedicated consultant beside them from the moment they decide to move, not just the day they land</div>
-        <p class="pkg-desc">Everything included in the Start with Confidence and Move with Confidence packages, plus a dedicated consultant beside you at every stage. From the early planning and paperwork, through the move itself, to the appointments and set-up once you're here - facilitated with the right trusted professionals - and continued support for a period after you've arrived. This is our most complete service: one person who knows your situation from the start and stays with you as Portugal becomes home.</p>
+        <div class="pkg-eyebrow">Tier 3 of 3 — Settle with Confidence</div>
+        <h3 class="pkg-title">Settle with Confidence</h3>
+        <p class="pkg-tagline">You've arrived. Now let's make it home.</p>
+        <div class="pkg-note">For those wanting a dedicated consultant by their side, from arrival to fully settled</div>
+        <p class="pkg-desc">You've made the move. Now it's about turning a new address into an actual home — accompanied appointments, local know-how, and continued support well past the day you land. This is our most complete service: a dedicated consultant with you at every stage, and ongoing support long after the paperwork is done.</p>
         <div class="pkg-body">
           <div class="pkg-features">
             <div class="pkg-feature">
@@ -402,28 +397,32 @@
               <p>One consultant who owns your relocation, from your first conversation through to being fully settled.</p>
             </div>
             <div class="pkg-feature">
-              <h4>AIMA Appointment Preparation</h4>
-              <p>We help you prepare thoroughly for your residency appointment, and can arrange for one of our trusted legal partners to be present if you wish.</p>
+              <h4>Accompanied AIMA Appointment</h4>
+              <p>We attend your residency appointment with you, prepared and ready to help.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Banking, Utility &amp; Mobile Set-Up Facilitation</h4>
-              <p>We facilitate bank account opening, home utilities and your Portuguese mobile number, sequenced in the right order and coordinated with the right providers and partners so it goes smoothly.</p>
+              <h4>Accompanied Banking &amp; Utility Set-Up</h4>
+              <p>We're there in person for account opening and getting connected — not just guidance.</p>
             </div>
             <div class="pkg-feature">
               <h4>Property Viewing Coordination</h4>
-              <p>Up to 4 in-person viewings with us in the Porto region, and viewings coordinated through our trusted partner agents elsewhere in Portugal - in person or by live video. We help you evaluate each option with a local eye.</p>
+              <p>We arrange and accompany viewings, helping you evaluate each option with a local eye.</p>
             </div>
             <div class="pkg-feature">
               <h4>Driving Licence Exchange Support</h4>
-              <p>We guide you through the IMT exchange process and connect you with the right professionals where needed.</p>
+              <p>Accompanied support navigating the exchange process at IMT.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Healthcare Insurance &amp; SNS Registration Guidance</h4>
-              <p>Guidance on healthcare insurance options and registering with the SNS, so you know what to arrange and when.</p>
+              <h4>Healthcare &amp; SNS Registration Support</h4>
+              <p>Accompanied registration, and help finding the right family doctor.</p>
             </div>
             <div class="pkg-feature">
-              <h4>Move-In &amp; Home Set-Up Coordination</h4>
-              <p>We coordinate the practical side of moving into your new home, whether you rent or buy: key handover and inventory check, building and neighbourhood essentials, and introductions to trusted suppliers for furniture, cleaning and repairs. In person in the Porto region; through our trusted partner network elsewhere in Portugal. Furniture sourcing and removals are available as add-ons.</p>
+              <h4>Move-In &amp; Home Set-Up Assistance</h4>
+              <p>Practical, hands-on help turning your new property into a home.</p>
+            </div>
+            <div class="pkg-feature">
+              <h4>Trusted Local Introductions</h4>
+              <p>Personal introductions to our vetted network of local suppliers and professionals.</p>
             </div>
             <div class="pkg-feature">
               <h4>Local Integration Support</h4>
@@ -435,7 +434,7 @@
             </div>
             <div class="pkg-feature">
               <h4>Ongoing Check-Ins</h4>
-              <p>We stay in touch for a period after your move, checking in as you settle into life here.</p>
+              <p>We stay in touch well after your move, checking in as you settle into life here.</p>
             </div>
             <div class="pkg-feature">
               <h4>Annual Administrative Reminders</h4>
@@ -448,9 +447,9 @@
               <li>Families relocating permanently</li>
               <li>Executives &amp; high-net-worth individuals</li>
               <li>Overseas property buyers</li>
-              <li>Clients wanting a fully facilitated, concierge-level experience</li>
+              <li>Clients wanting a fully accompanied, concierge-level experience</li>
             </ul>
-            <a href="https://cal.com/thebluedoor/consultation" target="_blank" rel="noopener" class="btn btn-primary">Enquire about Move &amp; Settle with Confidence</a>
+            <a href="https://cal.com/thebluedoor/consultation" target="_blank" rel="noopener" class="btn btn-primary">Enquire about Settle with Confidence</a>
           </div>
         </div>
       </div>
@@ -473,29 +472,19 @@
             <th>Blue Door</th>
             <th>Start</th>
             <th>Move</th>
-            <th>Move &amp; Settle</th>
+            <th>Settle</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Discovery Consultation - is Portugal right for you?</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Portugal &amp; Daily Life Overview</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Introduction to Visa &amp; Residency Routes</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Renting vs Buying Overview</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Retirement, Work &amp; Business Considerations</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Personal Relocation Plan &amp; Timeline</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Residency &amp; Immigration Guidance (with specialist referrals)</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Property &amp; Location Guidance</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Financial, Banking &amp; Tax Guidance</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Healthcare &amp; Insurance Guidance</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Pre-Move Practical Planning</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><td>Blue Door Guides &amp; Checklists</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Portugal &amp; Relocation Information</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Personal Relocation Consultation &amp; Plan</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Residency, Property, Banking &amp; Tax Guidance</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Relocation Timeline &amp; Guides</td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><td>Dedicated Personal Consultant</td><td></td><td></td><td class="yes">✓</td></tr>
-          <tr><td>Appointment Preparation &amp; Facilitation (AIMA, Banking, Mobile, IMT)</td><td></td><td></td><td class="yes">✓</td></tr>
-          <tr><td>Property Viewing Coordination (4 in Porto region included)</td><td></td><td></td><td class="yes">✓</td></tr>
-          <tr><td>Move-In &amp; Home Set-Up Coordination</td><td></td><td></td><td class="yes">✓</td></tr>
-          <tr><td>Local Integration Support</td><td></td><td></td><td class="yes">✓</td></tr>
-          <tr><td>Priority Scheduling &amp; Response</td><td></td><td></td><td class="yes">✓</td></tr>
-          <tr><td>Ongoing Check-Ins &amp; Annual Reminders</td><td></td><td></td><td class="yes">✓</td></tr>
+          <tr><td>Accompanied Appointments (AIMA, Banking, IMT)</td><td></td><td></td><td class="yes">✓</td></tr>
+          <tr><td>Property Viewing Coordination</td><td></td><td></td><td class="yes">✓</td></tr>
+          <tr><td>Move-In &amp; Home Set-Up Assistance</td><td></td><td></td><td class="yes">✓</td></tr>
+          <tr><td>Ongoing Check-Ins &amp; Priority Response</td><td></td><td></td><td class="yes">✓</td></tr>
         </tbody>
       </table>
     </div>
@@ -511,48 +500,17 @@
     </div>
     <div class="card" style="max-width:920px;margin:0 auto">
       <div class="addon-grid">
-        <details>
-          <summary>Airport meet &amp; greet</summary>
-          <p>We meet you on arrival and get you and your luggage to your accommodation, so your first hour in Portugal is the easy part.</p>
-        </details>
-        <details>
-          <summary>Temporary accommodation assistance</summary>
-          <p>Help finding and booking somewhere to stay for your first weeks, before your long-term home is ready.</p>
-        </details>
-        <details>
-          <summary>Furniture sourcing</summary>
-          <p>Guidance on where to buy, from local showrooms to delivery options, and coordination with trusted suppliers to furnish your home.</p>
-        </details>
-        <details>
-          <summary>Vehicle purchase assistance</summary>
-          <p>Guidance on buying or importing a car in Portugal, and introductions to dealers and specialists we trust.</p>
-        </details>
-        <details>
-          <summary>School visit coordination</summary>
-          <p>We help you shortlist schools and arrange visits, so you can compare options for your children with confidence.</p>
-        </details>
-        <details>
-          <summary>Translation &amp; interpreting services</summary>
-          <p>Certified translation of documents and interpreting for appointments, through our trusted language partners.</p>
-        </details>
-        <details>
-          <summary>Company formation guidance</summary>
-          <p>An overview of setting up a business in Portugal, and introductions to the accountants and lawyers who can register it for you.</p>
-        </details>
-        <details>
-          <summary>Retirement planning introductions</summary>
-          <p>Introductions to advisers who understand the financial and tax side of retiring to Portugal from abroad.</p>
-        </details>
-        <details>
-          <summary>Tax &amp; accounting introductions</summary>
-          <p>Introductions to English-speaking accountants for your Portuguese tax registration, returns and ongoing compliance.</p>
-        </details>
-        <details>
-          <summary>Legal introductions</summary>
-          <p>Introductions to the lawyers we work with for residency applications, property purchases and contracts.</p>
-        </details>
+        <div>Airport meet &amp; greet</div>
+        <div>Temporary accommodation assistance</div>
+        <div>Furniture sourcing</div>
+        <div>Vehicle purchase assistance</div>
+        <div>School visit coordination</div>
+        <div>Translation &amp; interpreting services</div>
+        <div>Company formation guidance</div>
+        <div>Retirement planning introductions</div>
+        <div>Tax &amp; accounting introductions</div>
+        <div>Legal introductions</div>
       </div>
-      <p class="addon-note">Add-ons are quoted individually, based on what you need.</p>
     </div>
   </div>
 </section>
@@ -578,7 +536,7 @@
       </div>
       <div><h5>Services</h5><a href="index.html#services">Visa &amp; Residency</a><a href="index.html#services">AIMA Support</a><a href="index.html#services">Banking &amp; NIF</a><a href="index.html#services">Healthcare</a><a href="index.html#services">Settling In</a></div>
       <div><h5>Guides</h5><a href="guides/nif-number-portugal.html">NIF Number</a><a href="index.html#guides">Bank Account</a><a href="index.html#guides">UTENTE / SNS</a><a href="index.html#guides">Driving Licence</a><a href="index.html#guides">All Guides</a></div>
-      <div><h5>Company</h5><a href="packages.html">Our Packages</a><a href="about.html">Our Story</a><a href="index.html#services">Porto &amp; North</a><a href="index.html#services">The Algarve</a><a href="https://cal.com/thebluedoor/consultation" target="_blank" rel="noopener">Contact</a><a href="https://cal.com/thebluedoor/consultation" target="_blank" rel="noopener">Book a Call</a></div>
+      <div><h5>Company</h5><a href="packages.html">Our Packages</a><a href="about.html">Our Story</a><a href="index.html#services">Porto &amp; North</a><a href="index.html#services">The Algarve</a><a href="https://cal.com/thebluedoor/consultation" target="_blank" rel="noopener">Contact</a><a href="https://cal.com/thebluedoor/consultation" target="_blank" rel="noopener">Book a Call</a><a href="legal.html#confidentiality">Confidentiality</a><a href="legal.html#liability">Legal Disclaimer</a></div>
     </div>
     <div class="disclaimer">
       This information is general guidance based on our own experience and current rules, which change frequently. It is not legal, tax or immigration advice; regulated advice is provided by our licensed partners. Confirm your situation with a qualified professional. © 2026 The Blue Door. All rights reserved.
