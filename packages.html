@@ -229,9 +229,14 @@
   .pkg-compare thead th:first-child{background:var(--stone-2)}
   .pkg-compare td.yes{color:var(--gold);font-size:17px;font-weight:700}
   .pkg-compare tbody tr:last-child td{border-bottom:none}
-  .addon-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;font-size:14.5px;color:#454545}
-  .addon-grid div{padding:9px 0 9px 20px;border-bottom:1px solid var(--line);position:relative}
-  .addon-grid div::before{content:'+';position:absolute;left:0;color:var(--terra);font-weight:700}
+  .addon-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;font-size:14.5px;color:#454545;align-items:start}
+  .addon-grid details{border-bottom:1px solid var(--line)}
+  .addon-grid summary{list-style:none;cursor:pointer;padding:11px 0 11px 20px;position:relative;font-weight:500;color:#333}
+  .addon-grid summary::-webkit-details-marker{display:none}
+  .addon-grid summary::before{content:'+';position:absolute;left:0;top:11px;color:var(--terra);font-weight:700;transition:transform .2s}
+  .addon-grid details[open] summary::before{transform:rotate(45deg)}
+  .addon-grid details p{margin:0;padding:0 0 12px 20px;font-size:13.5px;line-height:1.55;color:#666}
+  .addon-note{text-align:center;font-size:13.5px;color:#777;margin:18px 0 0}
   @media(max-width:640px){
     .addon-grid{grid-template-columns:1fr}
     .pkg-compare{font-size:12px}
@@ -506,17 +511,48 @@
     </div>
     <div class="card" style="max-width:920px;margin:0 auto">
       <div class="addon-grid">
-        <div>Airport meet &amp; greet</div>
-        <div>Temporary accommodation assistance</div>
-        <div>Furniture sourcing</div>
-        <div>Vehicle purchase assistance</div>
-        <div>School visit coordination</div>
-        <div>Translation &amp; interpreting services</div>
-        <div>Company formation guidance</div>
-        <div>Retirement planning introductions</div>
-        <div>Tax &amp; accounting introductions</div>
-        <div>Legal introductions</div>
+        <details>
+          <summary>Airport meet &amp; greet</summary>
+          <p>We meet you on arrival and get you and your luggage to your accommodation, so your first hour in Portugal is the easy part.</p>
+        </details>
+        <details>
+          <summary>Temporary accommodation assistance</summary>
+          <p>Help finding and booking somewhere to stay for your first weeks, before your long-term home is ready.</p>
+        </details>
+        <details>
+          <summary>Furniture sourcing</summary>
+          <p>Guidance on where to buy, from local showrooms to delivery options, and coordination with trusted suppliers to furnish your home.</p>
+        </details>
+        <details>
+          <summary>Vehicle purchase assistance</summary>
+          <p>Guidance on buying or importing a car in Portugal, and introductions to dealers and specialists we trust.</p>
+        </details>
+        <details>
+          <summary>School visit coordination</summary>
+          <p>We help you shortlist schools and arrange visits, so you can compare options for your children with confidence.</p>
+        </details>
+        <details>
+          <summary>Translation &amp; interpreting services</summary>
+          <p>Certified translation of documents and interpreting for appointments, through our trusted language partners.</p>
+        </details>
+        <details>
+          <summary>Company formation guidance</summary>
+          <p>An overview of setting up a business in Portugal, and introductions to the accountants and lawyers who can register it for you.</p>
+        </details>
+        <details>
+          <summary>Retirement planning introductions</summary>
+          <p>Introductions to advisers who understand the financial and tax side of retiring to Portugal from abroad.</p>
+        </details>
+        <details>
+          <summary>Tax &amp; accounting introductions</summary>
+          <p>Introductions to English-speaking accountants for your Portuguese tax registration, returns and ongoing compliance.</p>
+        </details>
+        <details>
+          <summary>Legal introductions</summary>
+          <p>Introductions to the lawyers we work with for residency applications, property purchases and contracts.</p>
+        </details>
       </div>
+      <p class="addon-note">Add-ons are quoted individually, based on what you need.</p>
     </div>
   </div>
 </section>
