@@ -230,8 +230,12 @@
   .pkg-compare td.yes{color:var(--gold);font-size:17px;font-weight:700}
   .pkg-compare tbody tr:last-child td{border-bottom:none}
   .addon-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;font-size:14.5px;color:#454545}
-  .addon-grid div{padding:9px 0 9px 20px;border-bottom:1px solid var(--line);position:relative}
-  .addon-grid div::before{content:'+';position:absolute;left:0;color:var(--terra);font-weight:700}
+  .addon-grid details{border-bottom:1px solid var(--line);padding:9px 0}
+  .addon-grid summary{cursor:pointer;padding-left:20px;position:relative;list-style:none;font-weight:500;color:#454545}
+  .addon-grid summary::-webkit-details-marker{display:none}
+  .addon-grid summary::before{content:'+';position:absolute;left:0;color:var(--terra);font-weight:700}
+  .addon-grid details[open] summary::before{content:'–'}
+  .addon-grid details p{margin:8px 0 0 20px;font-size:13.5px;color:var(--muted);line-height:1.6}
   @media(max-width:640px){
     .addon-grid{grid-template-columns:1fr}
     .pkg-compare{font-size:12px}
@@ -518,16 +522,16 @@
     </div>
     <div class="card" style="max-width:920px;margin:0 auto">
       <div class="addon-grid">
-        <div>Airport meet &amp; greet</div>
-        <div>Temporary accommodation assistance</div>
-        <div>Furniture sourcing</div>
-        <div>Vehicle purchase assistance</div>
-        <div>School visit coordination</div>
-        <div>Translation &amp; interpreting services</div>
-        <div>Company formation guidance</div>
-        <div>Retirement planning introductions</div>
-        <div>Tax &amp; accounting introductions</div>
-        <div>Legal introductions</div>
+        <details><summary>Airport meet &amp; greet</summary><p>We arrange for someone to meet you at the airport and help with that first ride to your new home — a familiar face on a jet-lagged first day.</p></details>
+        <details><summary>Temporary accommodation assistance</summary><p>We help you find short-term accommodation for your first weeks, so you have a base to search for a permanent home from.</p></details>
+        <details><summary>Furniture sourcing</summary><p>We connect you with trusted local furniture suppliers and secondhand marketplaces, so furnishing your new home doesn't mean starting from zero knowledge.</p></details>
+        <details><summary>Vehicle purchase assistance</summary><p>We guide you through buying a car in Portugal — what to expect, what to check — and connect you with trusted dealers or sellers where helpful.</p></details>
+        <details><summary>School visit coordination</summary><p>We help arrange visits to schools you're considering, so you can see them in person before deciding.</p></details>
+        <details><summary>Translation &amp; interpreting services</summary><p>We connect you with qualified, certified translators for official documents, and interpreters for appointments where you'd like support communicating.</p></details>
+        <details><summary>Company formation guidance</summary><p>We help you understand what's involved in setting up a business in Portugal, and connect you with the right accountant or lawyer to handle the formation itself.</p></details>
+        <details><summary>Retirement planning introductions</summary><p>We introduce you to financial advisers experienced in cross-border retirement planning — this isn't something we advise on directly.</p></details>
+        <details><summary>Tax &amp; accounting introductions</summary><p>We connect you with a qualified contabilista (accountant) who understands your specific tax situation — we don't provide tax advice ourselves.</p></details>
+        <details><summary>Legal introductions</summary><p>We introduce you to lawyers from our trusted network suited to your specific situation — from immigration to property to general legal matters.</p></details>
       </div>
     </div>
   </div>
