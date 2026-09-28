@@ -9,3 +9,16 @@ form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())
 form.addEventListener('input',()=>{document.querySelector('#enquiry-result').hidden=true;});
 const copy=document.querySelector('#copy-enquiry');copy.addEventListener('click',async()=>{const text=document.querySelector('#enquiry-summary');try{await navigator.clipboard.writeText(text.value);document.querySelector('#copy-status').textContent='Enquiry copied.';}catch{ text.focus();text.select();document.querySelector('#copy-status').textContent='Select and copy the enquiry above.';}});
 }
+
+// Reveal editorial content only when it enters the viewport. Without this script it stays visible.
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const targets = document.querySelectorAll('main .section-head, main .section .copy, main .section .service-card, main .section .step-item, main .section .report, main .section .faq, main .section .contact-choices, main .section .enquiry-form, main .section .contact-aside, main .cta .wrap');
+  targets.forEach((el) => el.classList.add('reveal-target'));
+  document.documentElement.classList.add('has-motion');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: .08, rootMargin: '0px 0px 45px 0px' });
+  targets.forEach((el) => observer.observe(el));
+}
