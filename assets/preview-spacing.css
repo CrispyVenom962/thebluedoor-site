@@ -1,0 +1,3 @@
+/* Space between the location note and the courtyard image. */
+.hero-photographic .micro{margin-bottom:36px}
+@media(max-width:650px){.hero-photographic .micro{margin-bottom:28px}}
