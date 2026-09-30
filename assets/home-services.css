@@ -1,0 +1,24 @@
+/* Homepage spacing and service rotation only. */
+.hero-photographic .hero-photo{margin-top:36px}
+.service-loop{background:#eee9df;border-top:1px solid #d8c6a3;border-bottom:1px solid #d8c6a3;padding:27px 0 32px}
+.service-loop .service-loop-inner{display:block}
+.service-loop-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+.service-loop-heading>span{font-size:10px;letter-spacing:.16em;color:#80622b}
+.service-loop-toggle{border:0;background:none;color:#526074;font-size:11px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.service-loop-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.service-loop-item{position:relative;display:flex;flex-direction:column;gap:6px;padding:8px 0 20px;color:#526074;text-decoration:none!important;transition:color .6s,opacity .6s;min-width:0}
+.service-loop .service-loop-number{font-size:10px;letter-spacing:.12em;color:#957540}
+.service-loop-item strong{font-family:Fraunces,Georgia,serif;font-size:21px;font-weight:400;line-height:1.3;color:#11244b}
+.service-loop .service-loop-detail{font-size:12px;font-weight:400;line-height:1.6}
+.service-loop-item::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:#cfc6b6}
+.service-loop-progress{position:absolute;bottom:0;left:0;right:0;height:2px;background:#b58c3e;transform:scaleX(0);transform-origin:left;z-index:1}
+.service-loop-item.is-active .service-loop-progress{animation:service-progress 2.8s linear forwards}
+.service-loop-item.is-active strong,.service-loop-item:hover strong{color:#866323}
+.service-loop.is-paused .service-loop-progress{animation-play-state:paused}
+.service-loop.is-enhanced .service-loop-item:not(.is-shown){display:none}
+.service-loop-item.is-entering{animation:service-enter .6s ease both}
+@keyframes service-progress{to{transform:scaleX(1)}}
+@keyframes service-enter{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.service-loop-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.service-loop-item strong{font-size:19px}}
+@media(max-width:650px){.hero-photographic .hero-photo{margin-top:28px}.service-loop{padding:24px 0}.service-loop-grid{gap:18px}.service-loop-item strong{font-size:18px}.service-loop-heading>span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.service-loop-progress{display:none}.service-loop-item{animation:none!important;transition:none}}
