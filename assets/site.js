@@ -9,3 +9,12 @@ form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())
 form.addEventListener('input',()=>{document.querySelector('#enquiry-result').hidden=true;});
 const copy=document.querySelector('#copy-enquiry');copy.addEventListener('click',async()=>{const text=document.querySelector('#enquiry-summary');try{await navigator.clipboard.writeText(text.value);document.querySelector('#copy-status').textContent='Enquiry copied.';}catch{ text.focus();text.select();document.querySelector('#copy-status').textContent='Select and copy the enquiry above.';}});
 }
+
+// Reveal content gently as it enters the viewport.
+(()=>{
+const targets=document.querySelectorAll('.section-head,.copy,.service-card,.step-item,.report,.section .lead,.cta .wrap');
+if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:0.08});
+targets.forEach(target=>{target.classList.add('reveal-target');observer.observe(target);});
+document.documentElement.classList.add('has-motion');
+})();
