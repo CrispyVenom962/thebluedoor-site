@@ -7,3 +7,6 @@
 @media(max-width:650px){.actions{width:100%;display:grid;grid-template-columns:1fr;gap:12px}.actions>.btn{width:100%;min-height:54px;padding:14px 18px;font-size:14px;margin:0}.package-card .actions{grid-template-columns:1fr}.package-card .actions .btn{min-height:54px;padding:14px 18px;font-size:14px}.btn svg{width:19px;height:19px}.page-hero .actions{max-width:420px}}
 @media(prefers-reduced-motion:reduce){.btn{transition:none}}
 @media(max-width:360px){.site-nav{gap:8px}.site-nav .brand{gap:8px}.site-nav .brand img{width:42px;height:42px}.site-nav .brand span{font-size:19px}.site-nav .brand small{font-size:6.5px;letter-spacing:.1em}.nav-toggle{font-size:12px;padding:7px 9px}}
+
+/* Site-wide editorial icon system, including guides and footer links. */
+.ui-arrow,.ui-check{display:inline-block;width:16px;height:16px;vertical-align:-2px;flex-shrink:0;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.ui-check{width:21px;height:21px}.text-link .ui-arrow,.site-footer .ui-arrow{margin-left:5px}.text-link{display:inline-flex;align-items:center;gap:5px;max-width:100%;line-height:1.5}.text-link .ui-arrow{flex:0 0 16px}.package-check .ui-check{vertical-align:middle}.form-help .ui-check{width:14px;height:14px}.guide-shell a .ui-arrow{margin-left:4px}
