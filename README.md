@@ -20,7 +20,7 @@ From this directory, run `python3 -m http.server 8000` and visit `http://localho
 ## Contact flow
 
 The consultation URL and WhatsApp number are preserved from the supplied site:
-- https://cal.com/thebluedoor/consultation
+- https://cal.com/thebluedoor/property-management-consultation
 - https://wa.me/351910174828
 
 `contact.html` prepares an enquiry entirely in the browser. Native validation precedes a review panel; the user chooses to open WhatsApp and send the message there. No message is sent to a backend, no form entry is stored and no successful submission is falsely reported. A direct WhatsApp link and consultation link remain available without JavaScript.
