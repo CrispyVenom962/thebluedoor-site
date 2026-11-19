@@ -5,3 +5,6 @@
 
 /* Restrained contact marks: real vector shapes, never emoji glyphs. */
 .contact-icon{width:19px;height:19px;flex:0 0 19px;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.contact-icon-whatsapp{stroke-width:1.35}.package-card .actions .btn{gap:9px;border-radius:4px;min-height:48px;font-weight:500;letter-spacing:.01em}.package-card .actions .btn-outline{border-color:#b8bfc8;background:transparent}.package-card .actions .btn-outline:hover{background:#11244b06;border-color:var(--navy)}
+
+.package-list.pkg-explain{list-style:none;padding:0;margin:24px 0 0}.pkg-explain li{margin:0;padding:15px 0;border-top:1px solid #e1ded4}.pkg-explain strong{display:block;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:5px;line-height:1.35}.pkg-explain span{display:block;font-size:13.5px;line-height:1.65;color:var(--muted)}
+.pkg-tag{display:inline-block;font-style:normal;font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#7a5a1c;background:#f1e7cf;border-radius:3px;padding:2px 7px;margin-left:8px;vertical-align:2px;white-space:nowrap}
