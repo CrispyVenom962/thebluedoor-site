@@ -10,3 +10,22 @@
 
 /* Site-wide editorial icon system, including guides and footer links. */
 .ui-arrow,.ui-check{display:inline-block;width:16px;height:16px;vertical-align:-2px;flex-shrink:0;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.ui-check{width:21px;height:21px}.text-link .ui-arrow,.site-footer .ui-arrow{margin-left:5px}.text-link{display:inline-flex;align-items:center;gap:5px;max-width:100%;line-height:1.5}.text-link .ui-arrow{flex:0 0 16px}.package-check .ui-check{vertical-align:middle}.form-help .ui-check{width:14px;height:14px}.guide-shell a .ui-arrow{margin-left:4px}
+
+/* Enrolment: get-started options and mobile contact bar */
+.start-options{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.start-option{display:flex;flex-direction:column;gap:8px;padding:26px 28px;border:1px solid #d8c6a3;background:#fff;color:#11244b;border-radius:4px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.start-option:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(17,36,75,.12)}
+.start-option strong{display:flex;align-items:center;gap:10px;font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:22px;line-height:1.2}
+.start-option span{font-size:14.5px;line-height:1.55;color:#4a586b}
+.start-option-primary{background:#11244b;border-color:#11244b;color:#fff}
+.start-option-primary span{color:#d6deea}
+.start-option .contact-icon{width:24px;height:24px;flex:0 0 24px}
+.enroll-bar{display:none}
+@media(max-width:900px){.start-options{grid-template-columns:1fr}
+.enroll-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(10,20,50,.96);border-top:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px)}
+.enroll-bar .btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 12px;font-size:14px;margin:0;width:100%}
+.enroll-bar .btn-outline{color:#fff;border-color:rgba(255,255,255,.45)}
+.enroll-bar .contact-icon{width:19px;height:19px}
+body:has(.enroll-bar){padding-bottom:76px}}
+.enroll-bar .btn.btn-outline,.enroll-bar .btn.btn-outline:hover{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.enroll-bar .btn.btn-gold{background:#dcb765;color:#11244b;border:1.5px solid #dcb765}
