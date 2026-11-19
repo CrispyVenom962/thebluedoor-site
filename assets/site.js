@@ -5,13 +5,23 @@ function closeMenu(){if(!toggle||!menu)return;menu.classList.remove('is-open');t
 if(toggle&&menu){toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Close':'Menu';menu.classList.toggle('is-open',open);});menu.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true'){closeMenu();toggle.focus();}});document.addEventListener('click',e=>{if(!e.target.closest('.site-header'))closeMenu();});window.matchMedia('(min-width:901px)').addEventListener('change',e=>{if(e.matches)closeMenu();});}
 const form=document.querySelector('#enquiry-form');
 if(form){
+const btn=form.querySelector('#send-btn'),err=form.querySelector('#form-error'),fields=form.querySelector('#enquiry-fields'),thanks=form.querySelector('#form-thanks'),waErr=form.querySelector('#error-wa');
 const val=n=>String(form.elements[n]?form.elements[n].value:'').trim();
-function summary(){const l=['Hello The Blue Door, I\u2019d like to talk about managing my property.','Name: '+val('name'),'Phone / WhatsApp: '+val('phone'),'Property location: '+val('location'),'Situation: '+val('situation')];if(val('email'))l.push('Email: '+val('email'));if(val('message'))l.push('Details: '+val('message'));return l.join('\n');}
-const wa=form.querySelector('#send-whatsapp'),mail=form.querySelector('#send-email'),cal=form.querySelector('#book-call');
-function update(){const t=summary();wa.href='https://wa.me/351910174828?text='+encodeURIComponent(t);mail.href='mailto:hello@thebluedoor.pt?subject='+encodeURIComponent('Property management enquiry')+'&body='+encodeURIComponent(t);const q=new URLSearchParams();if(val('name'))q.set('name',val('name'));if(val('email'))q.set('email',val('email'));q.set('notes',t);cal.href='https://cal.com/thebluedoor/property-management-consultation?'+q.toString();}
-form.addEventListener('input',update);update();
-[wa,mail,cal].forEach(a=>a.addEventListener('click',e=>{if(!form.reportValidity()){e.preventDefault();return;}update();}));
-form.addEventListener('submit',e=>e.preventDefault());
+function fallbackText(){return 'Hello The Blue Door, I\u2019d like to talk about managing my property.\nName: '+val('name')+'\nPhone: '+val('phone')+'\nLocation: '+val('location')+'\nSituation: '+val('situation');}
+form.addEventListener('submit',async e=>{
+e.preventDefault();err.hidden=true;
+if(form.elements.botcheck&&form.elements.botcheck.checked)return;
+if(!form.reportValidity())return;
+btn.disabled=true;const label=btn.textContent;btn.textContent='Sending...';
+const data={access_key:val('access_key'),subject:val('subject'),from_name:val('from_name'),name:val('name'),phone:val('phone'),location:val('location'),situation:val('situation'),message:val('message')||'(no message)'};
+if(val('email'))data.email=val('email');
+try{
+const res=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
+const out=await res.json();
+if(res.ok&&out.success){fields.hidden=true;thanks.hidden=false;thanks.focus();form.scrollIntoView({behavior:'smooth',block:'start'});return;}
+throw new Error('send failed');
+}catch(x){waErr.href='https://wa.me/351910174828?text='+encodeURIComponent(fallbackText());err.hidden=false;btn.disabled=false;btn.textContent=label;}
+});
 }
 
 // Reveal content gently as it enters the viewport.
